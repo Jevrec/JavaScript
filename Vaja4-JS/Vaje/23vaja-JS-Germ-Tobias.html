@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaja 23</title>
+    <style>
+         body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1{
+            color: lightcoral;
+            font-size: xx-large;
+        }
+        h2{
+            color: rgb(245, 177, 177);
+        }
+        hr{
+            border-top: 3px solid lightcoral;
+        }
+        button{
+            background-color: lightgray;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript HTML DOM</h1>
+    <hr>
+     <h2>Spreminjanje HTML vsebine</h2>
+
+        <p id="prvi">To je preprost odstavek besedila.</p>
+
+        <button onclick="spremeniBesedilo()">Spremeni odstavek</button>
+
+        <br>
+
+        <h2>Spreminjanje HTML atributov</h2>
+
+        <img id="slika" src="smesko.jpg" width="150"><br>
+        <button onclick="zamenjajSliko()">Zamenjaj sliko</button>
+
+        <h2>Spreminjanje CSS</h2>
+
+        <p id="cssOdstavek">Ta odstavek bomo oblikovali z JavaScriptom.</p>
+
+        <button onclick="nakljucnaBarva()">Naključna barva</button>
+        <button onclick="skrij()">Skrij</button>
+        <button onclick="prikazi()">Prikaži</button>
+
+        <h2>DOM dogodki</h2>
+
+        <p onclick="pokaziNavodilo()">Klikni me!</p>
+
+        <p id="navodilo"></p>
+
+        <img id="avto" src="avto.png" width="200"
+            onmouseover="menjajAvto1()"
+            onmouseout="menjajAvto0()">
+
+        <br><br>
+
+        Vnos:
+        <input type="text" onclick="pobarvaj()">
+
+        <script>
+            function spremeniBesedilo(){
+                document.getElementById("prvi").innerHTML = "Ta odstavek besedila je bil spremenjen s klikom na gumb!";
+            }
+
+            function zamenjajSliko(){
+                document.getElementById("slika").src = "smesko1.png";
+            }
+
+            function nakljucnaBarva(){
+                var r = Math.floor(Math.random()*256);
+                var g = Math.floor(Math.random()*256);
+                var b = Math.floor(Math.random()*256);
+
+                document.getElementById("cssOdstavek").style.color = "rgb(" + r + "," + g + "," + b + ")";
+            }
+
+            function skrij(){
+                document.getElementById("cssOdstavek").style.display = "none";
+            }
+
+            function prikazi(){
+                document.getElementById("cssOdstavek").style.display = "block";
+            }
+
+            function pokaziNavodilo(){
+                document.getElementById("navodilo").innerHTML = "Zapelji miško nad sliko avtomobila";
+            }
+
+            function menjajAvto1(){
+                document.getElementById("avto").src = "avto1.png";
+            }
+
+            function menjajAvto0(){
+                document.getElementById("avto").src = "avto.png";
+            }
+
+            function pobarvaj(){
+                event.target.style.backgroundColor = "coral";
+            }
+
+        </script>
+
+</body>
+</html>
