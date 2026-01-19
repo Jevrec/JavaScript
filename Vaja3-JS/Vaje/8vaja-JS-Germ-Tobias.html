@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaja 8</title>
+
+    <style>
+        body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue">Seštevanje števil</h1>
+
+    <form>
+        <label for="prva">Prvo število:</label><br>
+        <input type="number" id="prva"><br><br>
+
+        <label for="druga">Drugo število:</label><br>
+        <input type="number" id="druga"><br><br>
+
+        <button type="button" onclick="izracun()">Izračunaj</button>
+    </form>
+
+    <p id="primer"></p>
+
+    <script>
+        function izracun() {
+            var a = parseInt(document.getElementById("prva").value);
+            var b = Number(document.getElementById("druga").value);
+
+            var vsota = a + b;
+
+            document.getElementById("primer").innerHTML = "Seštevek je: " + vsota;
+        }
+    </script>
+
+    <br><br>
+    <a href="../idex.html"> &lt; nazaj na index</a>
+</body>
+</html>

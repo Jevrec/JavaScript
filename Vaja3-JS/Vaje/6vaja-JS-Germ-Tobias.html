@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaja 6</title>
+
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            padding: 10px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 4vh;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="color:blue">Prestopno leto</h1>
+    <div style="background-color: lightgray; padding: 10px 100px 10px 100px; border-radius: 10px;">
+        <p>Naključno generirano</p>
+        <p id="leto" style="background-color: beige; color: gold; text-align: center; padding: 2vh; border-radius: 10px;"> </p>
+        <p id="status" style="text-align: center;"> </p>
+    </div>
+
+    <script>
+        var randLeto = Math.floor(Math.random() * 10000);
+
+        document.getElementById("leto").innerHTML = randLeto;
+
+        if ((randLeto % 4 === 0 && randLeto % 100 !== 0) || randLeto % 400 === 0){
+            document.getElementById("status").innerHTML = "Je prestopno";
+        }else{
+            document.getElementById("status").innerHTML = "Ni prestopno";
+        }
+    </script>  
+    <br><br>
+    <a href="../idex.html"> &lt; nazaj na index</a> 
+</body>
+</html>

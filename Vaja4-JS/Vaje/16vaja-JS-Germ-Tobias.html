@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaja 16</title>
+    <style>
+        body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1{
+            color: lightcoral;
+            font-size: xx-large;
+        }
+        #msg{
+            color: lightcoral;
+            font-size: xx-large;
+        }
+        hr{
+            border-top: 1px dotted lightcoral;
+        }
+        #sp{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Obseg in ploščina likov</h1>
+    <form>
+        <select name="liki" id="liki">
+            <option value="prazno" selected></option>
+            <option value="kvadrat">kvadrat</option>
+            <option value="pravokotnik">pravokotnik</option>
+            <option value="pravokotni trikotnik">pravokotni trikotnik</option>
+            <option value="krog">krog</option>
+        </select>
+
+        <button type="button" onclick="izracun()">Izberi lik</button>
+    </form>
+    <br><br><br>
+    <b id="msg" class="msg"></b>
+    <br>
+    <hr/>
+
+    <p id="vnešenaDolžina1" style="color: gray;"></p>
+    <p id="vnešenaDolžina2" style="color: gray;"></p>
+
+    <p id="spremenljivka1" style="color: blue;"></p>
+    <p id="spremenljivka2" style="color: blue;"></p>
+    <p id="spremenljivka3" style="color: blue;"></p>
+    <script>
+        function izracun(){
+            var lik = document.getElementById("liki").value;
+            console.log(lik);
+
+            var vnos1;
+            var vnos2;
+            var vnos3;
+
+            switch(lik){
+                case "prazno":
+                    document.getElementById("msg").innerHTML = "Nisi izbral lika!!!";
+                    break;
+
+                case "kvadrat":
+                    document.getElementById("msg").innerHTML = "Kvadrat";
+                    vnos = prompt("vnesi dolžino stranic");
+
+                    document.getElementById("vnešenaDolžina1").innerHTML = "dolžina stranice kvadrata: " + vnos;
+
+                    document.getElementById("spremenljivka1").innerHTML = "Ploščina kvadrata: " + vnos * vnos;
+                    document.getElementById("spremenljivka2").innerHTML = "Obseg kvadrata: " + vnos * 4;
+                    break;
+
+                case "pravokotnik":
+                    document.getElementById("msg").innerHTML = "Pravokotnik";
+                    vnos = prompt("vnesi dolžino stranic");
+
+                    document.getElementById("vnešenaDolžina1").innerHTML = "dolžina prve stranice kvadrata: " + vnos1;
+                    document.getElementById("vnešenaDolžina2").innerHTML = "dolžina druge stranice kvadrata: " + vnos2;
+
+                    document.getElementById("spremenljivka1").innerHTML = "Ploščina pravokotnika: " + vnos1 * vnos2;
+                    document.getElementById("spremenljivka2").innerHTML = "Obseg pravokotnika: " + vnos * 4;
+                    break;
+
+                case "pravokotni trikotnik":
+                    document.getElementById("msg").innerHTML = "Pravokotni trikotnik";
+                    vnos = prompt("vnesi dolžino stranic");
+                    break;
+
+                case "krog":
+                    document.getElementById("msg").innerHTML = "Krog";
+                    vnos = prompt("vnesi dolžino stranic");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

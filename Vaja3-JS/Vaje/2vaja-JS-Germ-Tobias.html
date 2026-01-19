@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaja 2</title>
+    <style>
+        h2, h1{
+            color:blue; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Prikaz podatkov</h1>
+    <script>
+	  window.alert("Pojavno okno, ki ga sproži JavaScript ob zagonu strani!");
+      console.log("To besedilo je izpisal JavaScript v konzolo!");
+   </script>
+
+    <h2>1. Izpis podatkov v pojavno okno</h2>
+    <button type="button" 
+            onclick="window.alert('Pojavno okno, ki ga sproži JavaScript ob kliku na gumb!')">
+            Klikni me, da prikažem pojavno okno!</button>
+
+    <h2>2. Izpis podatkov v HTML</h2>
+    <p>To besedilo je običajen odstavek</p>
+    <span style="background-color: orangered;">
+        <script>
+            document.write("To besedilo se je izpisalo z JavaScript!");
+        </script>
+    </span>
+    <br><br>
+    <button type="button" onclick="document.write('Uspešno si kliknil gumb!')">Klikni me, da izpišem besedilo v HTML!</button>
+    
+
+    <h2>3. Izpis podatkov v HTML element</h2>
+    <p>To besedilo je običajen odstavek</p>
+    <p id="primer" style="background-color: orangered;"> </p>
+    <script>
+        document.getElementById("primer").innerHTML = "To besedilo je izpisal JavaScript v HTML elemnt &ltp&gt!";
+    </script>
+    <p id="primer1" style="background-color: orangered;"> </p>
+    <button 
+        type="button" 
+        onclick="document.getElementById('primer1').innerHTML = 'To besedilo je izpisal JavaScript v HTML element &ltp&gt, ker si kliknil gumb'">
+            Klikni me, da izpišem besedilo v HTML element!</button>
+            
+
+    <h2>4. Izpis podatkov v konzolo</h2>
+    <p>To besedilo je običajen odstavek</p>
+    
+    <button 
+        type="button" 
+        onclick="console.log('To besedilo je s klikom na gumb izpisal JavaScript v konzolo!')">
+            Klikni me, da izpišem besedilo v konzolo!</button>
+
+    <br><br>
+    <a href="../idex.html"> &lt; nazaj na index</a>
+</body>
+</html>

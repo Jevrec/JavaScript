@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menjalnica</title>
+    <style>
+        body{
+            margin: 0 30%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+        h1{
+            color: red;
+        }
+        hr{
+            border-top: 1px solid red;
+        }
+        button{
+            background-color: lightcoral;
+            box-shadow: 10px;
+            border-color: lightgray;
+            padding: 10px;
+            color: white;
+        }
+        p{
+            background-color: rgb(242, 204, 204);
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MENJALNICA</h1>
+    <hr>
+
+    <div>
+        <p>Znesek v <b>EVR: </b><b id="eur" style="color: blue; font-size: x-large;"></b></p>
+        <p>Znesek v <b>USD: </b><b id="usd" style="color: blue; font-size: x-large;"></b></p>
+    </div>
+
+    <button type="button" onclick="vnosnoOkno()">Vnesi nov znesek</button>
+
+    <script>
+        function vnosnoOkno(){
+            var eur = prompt("Vnesi znesekv v €");
+            var usd;
+
+            if(eur != null){
+                usd = eur * 1.1686;
+                usd = usd.toFixed(2);
+
+                document.getElementById("usd").innerHTML = usd;
+                document.getElementById("eur").innerHTML = eur;
+            }
+        }
+    </script>
+    
+    <br><br>
+    <a href="../idex.html"> &lt; nazaj na index</a>
+</body>
+</html>
