@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaja 19</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            padding: 10px;
+        }
+        h1{
+            color: blue;
+        }
+        form{
+            background-color: #ebe6a3;
+            padding: 10px;
+        }
+        input{
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipkanje</h1>
+    <form name="obrazec">
+        <table>
+            <tr>
+                <td style="text-align: right;">Ime:</td>
+                <td><input type="text" id="ime"></td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: right;">Priimek:</td>
+                <td><input type="text" id="priimek"></td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: right;">Ulica:</td>
+                <td><input type="text" id="ulica"></td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: right;">Kraj:</td>
+                <td><input type="text" id="kraj"><br></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;">Poštna številka:</td>
+                <td><input type="text" id="posta"><br></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;">Spol:</td>
+                <td>
+                    <select id="spol">
+                        <option value="prazno"> -- </option>
+                        <option value="moski">Moški</option>
+                        <option value="zenska">Ženska</option>
+                    </select>
+                </td>
+            </tr>
+                
+            <tr>
+                <td style="text-align: right;">Rojstvo:</td>
+                <td>
+                    <select name="mesec_roj">
+                        <option value=""> -- </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="dan_roj">
+                        <option value=""> -- </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <input type="number" name="leto_roj" id="leto_roj" value="0000">
+                </td>
+                </tr>
+
+            <tr>
+                <td style="text-align: right;">GSM:</td>
+                <td><input type="text" id="gsm"><br></td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: right;">Email:</td>
+                <td><input type="text" id="email"><br></td>
+            </tr>
+
+             <tr>
+                <td style="text-align: right;">Krožek:</td>
+                <td>
+                    <select id="krozek" multiple>
+                        <option value="prazno"></option>
+                        <option>Nogomet</option>
+                        <option>Rokomet</option>
+                        <option>Odbojka</option>
+                        <option>Tek</option>
+                    </select>
+                </td>
+            </tr>
+            
+             <tr>
+                <th style="text-align: center;" colspan="2">Označi tvoje znanje</th>
+            </tr>
+            
+             <tr>
+                <td style="text-align: right;">HTML</td>
+                <td><input type="checkbox" id="html"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">JavaScript</td>
+                <td><input type="checkbox" id="js"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">ASP.NET</td>
+                <td><input type="checkbox" id="asp"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">C#</td>
+                <td><input type="checkbox" id="c"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">SQL</td>
+                <td><input type="checkbox" id="sql"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;">Tvoje znanje C#: </td>
+                <td>
+                    <input type="radio" id="nez" name="znanje" value="nez">
+                    <label for="nez">Nezadostno</label><br>
+
+                    <input type="radio" id="zd" name="znanje" value="zd">
+                    <label for="zd">Zadostno</label><br>
+
+                    <input type="radio" id="db" name="znanje" value="db">
+                    <label for="db">Dobro</label><br>
+
+                    <input type="radio" id="pdb" name="znanje" value="pdb">
+                    <label for="pdb">Prav Dobro</label><br>
+
+                    <input type="radio" id="odl" name="znanje" value="odl">
+                    <label for="odl">Odlično</label><br>
+                </td>
+            </tr>
+            
+             <tr>
+                <td style="text-align: right;">
+                    <button type="button" onclick="preveri()">Pošlji</button>
+                </td>
+                <td style="text-align: left;">
+                    <button type="reset">Počisti</button>
+                </td>
+            </tr>
+            <br>
+            </form>
+            </table>
+    <script>
+        function preveri(){
+            var ime = document.getElementById("ime").value;
+
+            if(ime == "" || ime.length < 3){
+                alert("Ime mora imeti vsaj 3 znake!");
+                document.getElementById("ime").style.backgroundColor = "#e9967a";
+                document.obrazec.ime.focus();
+                return;
+            }
+
+            var priimek = document.getElementById("priimek").value;
+
+            if(priimek == "" || priimek.length < 3){
+                alert("Priimek mora imeti vsaj 3 znake!");
+                document.getElementById("priimek").style.backgroundColor = "#e9967a";
+                document.obrazec.priimek.focus();
+                return;
+            }
+
+            var posta = document.getElementById("posta").value;
+
+            if(isNaN(posta) || posta.length != 4){
+                alert("Poštna številka mora biti 4 mestno število!");
+                document.getElementById("posta").style.backgroundColor = "#e9967a";
+                return;
+            }
+
+            var spol = document.getElementById("spol").value;
+
+            if(spol == "prazno"){
+                alert("Izberi spol!");
+                document.getElementById("spol").style.backgroundColor = "#e9967a";
+                return;
+            }
+
+            var leto = document.getElementById("leto_roj").value;
+            var trenutno = new Date().getFullYear();
+
+            if(isNaN(leto) || leto < 1900 || leto > trenutno){
+                alert("Letnica mora biti med 1900 in " + trenutno);
+                document.getElementById("leto_roj").style.backgroundColor = "#e9967a";
+                return;
+            }
+
+            var gsm = document.getElementById("gsm").value;
+
+            if(isNaN(gsm) || gsm.length != 9){
+                alert("GSM mora imeti 9 števil!");
+                document.getElementById("gsm").style.backgroundColor = "#e9967a";
+                return;
+            }
+
+            var email = document.getElementById("email").value;
+
+            if(email.indexOf("@") == -1 || email.indexOf(".") == -1){
+                alert("Email ni pravilen!");
+                document.getElementById("email").style.backgroundColor = "#e9967a";
+                return;
+            }
+
+            var krozek = document.getElementById("krozek");
+            var izbranKrozek = false;
+
+            for(var i=0; i<krozek.options.length; i++){
+                if(krozek.options[i].selected &&
+                krozek.options[i].value != "prazno"){
+                    izbranKrozek = true;
+                }
+            }
+
+            if(!izbranKrozek){
+                alert("Izberi krožek!");
+                document.getElementById("krozek").style.backgroundColor = "#e9967a";
+                return;
+            }
+
+            var polja = document.querySelectorAll("input[type=checkbox]");
+            var st = 0;
+
+            for(var i=0; i<polja.length; i++){
+                if(polja[i].checked){
+                    st++;
+                }
+            }
+
+            if(st == 0){
+                alert("Izberi vsaj eno znanje!");
+                return;
+            }
+
+            if(st > 3){
+                alert("Izbereš lahko največ 3 znanja!");
+                return;
+            }
+
+            var razredi = document.getElementsByName("znanje");
+            var izbran = false;
+
+            for(var i=0; i<razredi.length; i++){
+                if(razredi[i].checked){
+                    izbran = true;
+                }
+            }
+
+            if(!izbran){
+                alert("Izberi stopnjo znanja C#!");
+                return;
+            }
+
+            alert("Obrazec je pravilno izpolnjen!");
+            }
+
+    </script>
+</body>
+</html>

@@ -44,53 +44,94 @@
 
     <p id="vnešenaDolžina1" style="color: gray;"></p>
     <p id="vnešenaDolžina2" style="color: gray;"></p>
+    <p id="vnešenaDolžina3" style="color: gray;"></p>
 
     <p id="spremenljivka1" style="color: blue;"></p>
     <p id="spremenljivka2" style="color: blue;"></p>
     <p id="spremenljivka3" style="color: blue;"></p>
+
+    <canvas id="platno" width="300" height="300" style="border:1px solid black;"></canvas>
+
     <script>
         function izracun(){
             var lik = document.getElementById("liki").value;
-            console.log(lik);
 
-            var vnos1;
-            var vnos2;
-            var vnos3;
+            var platno = document.getElementById("platno");
+            var ctx = platno.getContext("2d");
+
+            ctx.clearRect(0, 0, platno.width, platno.height);
+
 
             switch(lik){
+
                 case "prazno":
-                    document.getElementById("msg").innerHTML = "Nisi izbral lika!!!";
+                    document.getElementById("msg").innerHTML =
+                    "Ne morem izračunati ploščine in obsega, ker nisi izbral lika!";
                     break;
 
                 case "kvadrat":
+                    var a = Number(prompt("Vnesi dolžino stranice kvadrata:"));
+
                     document.getElementById("msg").innerHTML = "Kvadrat";
-                    vnos = prompt("vnesi dolžino stranic");
 
-                    document.getElementById("vnešenaDolžina1").innerHTML = "dolžina stranice kvadrata: " + vnos;
+                    document.getElementById("vnešenaDolžina1").innerHTML = "Stranica a: " + a;
 
-                    document.getElementById("spremenljivka1").innerHTML = "Ploščina kvadrata: " + vnos * vnos;
-                    document.getElementById("spremenljivka2").innerHTML = "Obseg kvadrata: " + vnos * 4;
+                    document.getElementById("spremenljivka1").innerHTML = "Ploščina: " + (a * a);
+                    document.getElementById("spremenljivka2").innerHTML = "Obseg: " + (4 * a);
+
+                    ctx.strokeRect(50, 50, a, a);
                     break;
 
                 case "pravokotnik":
+                    var a = Number(prompt("Vnesi prvo stranico:"));
+                    var b = Number(prompt("Vnesi drugo stranico:"));
+
                     document.getElementById("msg").innerHTML = "Pravokotnik";
-                    vnos = prompt("vnesi dolžino stranic");
 
-                    document.getElementById("vnešenaDolžina1").innerHTML = "dolžina prve stranice kvadrata: " + vnos1;
-                    document.getElementById("vnešenaDolžina2").innerHTML = "dolžina druge stranice kvadrata: " + vnos2;
+                    document.getElementById("vnešenaDolžina1").innerHTML = "Stranica a: " + a;
+                    document.getElementById("vnešenaDolžina2").innerHTML = "Stranica b: " + b;
 
-                    document.getElementById("spremenljivka1").innerHTML = "Ploščina pravokotnika: " + vnos1 * vnos2;
-                    document.getElementById("spremenljivka2").innerHTML = "Obseg pravokotnika: " + vnos * 4;
+                    document.getElementById("spremenljivka1").innerHTML = "Ploščina: " + (a * b);
+                    document.getElementById("spremenljivka2").innerHTML = "Obseg: " + (2 * (a + b));
+
+                    ctx.strokeRect(40, 40, a, b);
                     break;
 
                 case "pravokotni trikotnik":
-                    document.getElementById("msg").innerHTML = "Pravokotni trikotnik";
-                    vnos = prompt("vnesi dolžino stranic");
+                    var a = Number(prompt("Vnesi kateto a:"));
+                    var b = Number(prompt("Vnesi kateto b:"));
+
+                    var c = Math.sqrt(a*a + b*b);
+
+                    document.getElementById("msg").innerHTML ="Pravokotni trikotnik";
+                    document.getElementById("vnešenaDolžina1").innerHTML = "Stranica a: " + a;
+                    document.getElementById("vnešenaDolžina2").innerHTML = "Stranica b: " + b;
+                    document.getElementById("vnešenaDolžina3").innerHTML = "Stranica c: " + c;
+
+                    document.getElementById("spremenljivka1").innerHTML ="Ploščina: " + (a*b/2);
+                    document.getElementById("spremenljivka2").innerHTML ="Obseg: " + (a + b + c);
+
+                    ctx.beginPath();
+                    ctx.moveTo(50, 200);
+                    ctx.lineTo(50 + a, 200);
+                    ctx.lineTo(50, 200 - b);
+                    ctx.closePath();
+                    ctx.stroke();
                     break;
 
                 case "krog":
+                    var r = Number(prompt("Vnesi polmer kroga:"));
+
                     document.getElementById("msg").innerHTML = "Krog";
-                    vnos = prompt("vnesi dolžino stranic");
+
+                    document.getElementById("vnešenaDolžina1").innerHTML = "Širina premera kroga : " + r;
+
+                    document.getElementById("spremenljivka1").innerHTML = "Ploščina: " + (Math.PI * r * r).toFixed(2);
+                    document.getElementById("spremenljivka2").innerHTML = "Obseg: " + (2 * Math.PI * r).toFixed(2);
+                    
+                    ctx.beginPath();
+                    ctx.arc(150, 150, r, 0, 2*Math.PI);
+                    ctx.stroke();
                     break;
             }
         }
