@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            padding: 10px;
+        }
+
+        .container{
+            background-color: lightskyblue;
+            padding: 20px;
+            margin: 20px;
+            width: 50%;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        button{
+            padding:10px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: rgb(249, 162, 162);
+            border: none;
+        }
+
+        button:hover{
+            background-color: rgb(165, 110, 110);
+        }
+
+        input{
+            padding:10px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        ul li{
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        ul li.checked{
+            text-decoration: line-through;
+            color: rgb(75, 75, 75);
+        }
+
+        li{
+            background-color: lightgray;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List</h2>
+            <div>
+                <input type="text">
+                <button onclick="">Add</button>
+            </div>
+            <ul>
+                <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

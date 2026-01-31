@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            padding: 10px;
+        }
+
+    .tipke{
+        display: flex;
+    }
+    
+    .tipke button {
+        background-color: #f1f1f1;
+        margin: 1vh;
+        padding: 5vh;
+        font-size: 30px;
+        border-radius: 30px;
+        font-size: xx-large;
+        font-weight: bolder;
+        }
+
+    button:hover {
+        background-color: gray;
+        }
+    
+    .calc{
+        background-color: black;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .tipke .btn_operacija{
+        background-color: gold;
+    }
+
+    .tipke .btn_operacija:hover{
+        background-color: goldenrod;
+    }
+    
+    .display{
+        background-color: lightgray;
+        font-size: xx-large;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+    <div class="calc">
+        <input type="text" id="display" class="display" readonly>
+        <div id="keys">
+            <div class="tipke">
+                <button class="button" onclick="appendToDisplay('1')">1</button>
+                <button class="button" onclick="appendToDisplay('2')">2</button>
+                <button class="button" onclick="appendToDisplay('3')">3</button>
+                <button class="btn_operacija" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div class="tipke">
+                <button class="button" onclick="appendToDisplay('4')">4</button>
+                <button class="button" onclick="appendToDisplay('5')">5</button>
+                <button class="button" onclick="appendToDisplay('6')">6</button>
+                <button class="btn_operacija" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div class="tipke">
+                <button class="button" onclick="appendToDisplay('7')">7</button>
+                <button class="button" onclick="appendToDisplay('8')">8</button>
+                <button class="button" onclick="appendToDisplay('9')">9</button>
+                <button class="btn_operacija" onclick="appendToDisplay('+')">+</button>
+            </div> 
+            <div class="tipke">
+                <button class="btn_operacija" onclick="izbrisiVse()">C</button>
+                <button class="button" onclick="appendToDisplay('0')">0</button>
+                <button class="btn_operacija" onclick="appendToDisplay('*')">*</button>
+                <button class="btn_operacija" onclick="izracunaj()">=</button>
+            </div> 
+            <div class="tipke"  >
+                <button class="btn_operacija" onclick="IzbrisiZadnjo()">←</button>
+            </div>
+        </div>
+    </div> 
+    <script>
+        const display = document.getElementById("display");
+
+        function appendToDisplay(input){
+            display.value += input;
+        }
+
+        function izbrisiVse(){
+            display.value = "";
+        }
+
+        function IzbrisiZadnjo(){
+            display.value = (display.value).slice(0, -1);
+        }
+
+        function izracunaj(){
+            try{
+                display.value = eval(display.value);
+            } catch(error){
+                display.value = "Napaka";
+            }
+        }
+    </script>
+</body>
+</html>
