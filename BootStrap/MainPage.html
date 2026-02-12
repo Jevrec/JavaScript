@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival hrane 2025</title>
+
+     <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Bootstrap ikone-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<body>
+<header>
+    <nav class="navbar bg-dark sticky-top">
+        <a href="#" class="nav-link text-white p-3 active"><h1>Domov</h1></a>
+        <a href="#" class="nav-link text-white p-3"><h1>O festivalu</h1></a>
+        <a href="#" class="nav-link text-white p-3"><h1>Kontakt</h1></a>
+    </nav>
+</header>
+
+<main class="my-5">
+    <h1>Dobrodošli na festivalu</h1>
+    <p>Tukaj pride vsebina strani.</p>
+    <img src="images/pexels-robinstickel-70497.jpg" alt="Slika_Hrane" class="w-100">
+</main>
+
+<footer class="bg-dark text-light text-center py-4 mt-5 ">
+    <p>Copyright</p>
+    <p id="leto"></p>
+    <div>
+        <a href="#" class="text-light me-3 fs-4">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="text-light me-3 fs-4">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="text-light fs-4">
+            <i class="bi bi-youtube"></i>
+        </a>
+    </div>
+</footer>
+<script>
+    document.getElementById("leto").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
