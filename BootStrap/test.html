@@ -5,58 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-     <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
 </head>
 <body>
-<div style="margin: 5vh;">
-    <div
-        class="table-responsive"
-    >
-        <table
-            class="table table-primary"
-        >
-            <thead>
-                <tr>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 2</th>
-                    <th scope="col">Column 3</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="">
-                    <td scope="row">R1C1</td>
-                    <td>R1C2</td>
-                    <td>R1C3</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="container my-3">
+    <div class="row my-5">
+        <!-- uporaba columns -->
+        <div class="col">
+            <div class="card">
+                <img src="images/pexels-robinstickel-70497.jpg" alt="IMG" class="card-img-top " />
+                <div class="card-body card-img-overlay text-white">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio odit voluptas pariatur officia at saepe, nam deserunt dicta sed, ducimus dolorem ea doloremque necessitatibus veritatis veniam. Dolore consequuntur rerum explicabo?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="images/pexels-robinstickel-70497.jpg" alt="IMG" class="card-img-top " />
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio odit voluptas pariatur officia at saepe, nam deserunt dicta sed, ducimus dolorem ea doloremque necessitatibus veritatis veniam. Dolore consequuntur rerum explicabo?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <h3 class="card-header">Header</h3>
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio odit voluptas pariatur officia at saepe, nam deserunt dicta sed, ducimus dolorem ea doloremque necessitatibus veritatis veniam. Dolore consequuntur rerum explicabo?
+                    </div>
+                </div>
+                <div class="card-footer">Footer</div>
+            </div>
+        </div>
     </div>
 
+    <!-- uporaba card-group -->
+    <hr class="p-3 border-4">
+    <div class="card-group">
+        <div class="card">
+                <img src="images/pexels-robinstickel-70497.jpg" alt="IMG" class="card-img-top " />
+                <div class="card-body card-img-overlay text-white">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio odit voluptas pariatur officia at saepe, nam deserunt dicta sed, ducimus dolorem ea doloremque necessitatibus veritatis veniam. Dolore consequuntur rerum explicabo?
+                    </div>
+                </div>
+            </div>
     <div class="card">
-        <img
-            class="card-img-top fs-4 me-3"
-            src="images/pexels-robinstickel-70497.jpg"
-            alt="Card image cap"
-        />
-        <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Item 1</li>
-            <li class="list-group-item">Item 2</li>
-            <li class="list-group-item">Item 3</li>
-        </ul>
+                <img src="images/pexels-robinstickel-70497.jpg" alt="IMG" class="card-img-top " />
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio odit voluptas pariatur officia at saepe, nam deserunt dicta sed, ducimus dolorem ea doloremque necessitatibus veritatis veniam. Dolore consequuntur rerum explicabo?
+                    </div>
+                </div>
+            </div>
+     <div class="card">
+                <h3 class="card-header">Header</h3>
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <span class="card-subtitle">Subtitle</span>
+                    <div class="card-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio odit voluptas pariatur officia at saepe, nam deserunt dicta sed, ducimus dolorem ea doloremque necessitatibus veritatis veniam. Dolore consequuntur rerum explicabo?
+                    </div>
+                </div>
+                <div class="card-footer">Footer</div>
+            </div>
     </div>
-    
-    
+
+    <!-- Modal -->
+    <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#modal">Open Modal</button>
+
+    <div class="modal fade modal-lg" id="modal">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Header</h1>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: xx-large;">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam alias quis aspernatur non illo ducimus iusto, eveniet assumenda suscipit voluptates repudiandae aliquid necessitatibus ratione consectetur nesciunt? Nostrum ipsum ea recusandae! Et pariatur eveniet similique iure. Officiis eveniet sunt a, expedita reprehenderit ratione, velit inventore voluptas suscipit earum eaque. Mollitia voluptatem eaque cupiditate, dolore nisi dolorem impedit eveniet ea velit ducimus dolor autem maxime illum doloribus corrupti rem quia consequuntur adipisci exercitationem quisquam quae numquam? Deleniti esse non velit nam obcaecati perferendis aliquid repudiandae earum qui debitis aperiam voluptate quia perspiciatis, inventore ratione facere. Nostrum iure ratione provident similique itaque. Minus deserunt quam rem sed. Repellat aspernatur suscipit eum quibusdam recusandae voluptatem veritatis incidunt nostrum, ex maiores? Incidunt ipsum minima quas similique exercitationem, accusantium aspernatur reprehenderit nostrum hic! Ipsum reiciendis natus similique, labore laboriosam dolorem. Nesciunt dicta, repellat necessitatibus corporis adipisci, exercitationem culpa natus esse fuga praesentium illum fugiat magnam laboriosam debitis possimus rerum quasi suscipit vel beatae? Corporis commodi tempora obcaecati nihil totam porro dicta architecto dolore laudantium, nesciunt sunt, voluptatem voluptas ab quidem harum accusantium fugiat modi cum voluptate, voluptatibus magni tempore repellat libero corrupti! Ipsum quas ex saepe, in, repellendus distinctio provident vitae sit molestiae, blanditiis dolores.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary">Toggle</button>
 </div>
 </body>
 </html>
