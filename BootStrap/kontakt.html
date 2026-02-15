@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival hrane 2025</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Logo.png" alt="Logotip festivala hrane" height="100">
+            </a>
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Domov</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="o-nas.html">O festivalu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+<section class="p-5">
+    <div class="container kontakt">
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <h2 class="mb-4">Rezerviraj mizo</h2>
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label">Ime in priimek</label>
+                        <input type="text" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite ime in priimek
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Prosimo, vnesite veljaven email
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Število oseb</label>
+                        <select class="form-select" required>
+                            <option value="">Izberi neki...</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Izberite število oseb
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Datum in ura</label>
+                        <input type="datetime-local" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Izberite datum in uro
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Pošlji
+                    </button>
+                </form>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 class="mb-4">Kontakt</h2>
+                <p>
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    Rudarska cesta, 3320 Velenje
+                </p>
+                <p>
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    +386 031 192 402
+                </p>
+                <p>
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    info@festivalhrane.si
+                </p>
+                <div class="ratio ratio-16x9 mt-4 rounded-3 overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps?q=Velenjea&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="bg-dark text-light text-center text-md-start py-4 mt-5">
+    <p>Copyright</p>
+    <p id="leto"></p>
+    <div>
+        <a href="#" class="text-light me-3 fs-4">
+            <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="text-light me-3 fs-4">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="#" class="text-light fs-4">
+            <i class="bi bi-youtube"></i>
+        </a>
+    </div>
+</footer>
+<script>
+(() => {
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+
+</body>
+</html>

@@ -13,3 +13,12 @@
     height: 60vh;
     object-fit: cover;
 }
+
+.festival-img{
+    height: 80vh;
+    object-fit: cover;
+}
+
+.kontakt{
+    height: 100vh;
+}
